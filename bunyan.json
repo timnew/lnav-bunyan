@@ -1,0 +1,85 @@
+{
+  "bunyan": {
+    "title": "Bunyan Log",
+    "url": "https://github.com/trentm/node-bunyan",
+    "description": "Log for bunyan output",
+    "json": true,
+    "line-format": [
+      { "field": "name" },
+      "(",
+      { "field": "pid" },
+      ")",
+      " @ ",
+      { "field": "hostname" },
+      " -- ",
+      { "field": "time" },
+      " [",
+      { "field": "level" },
+      "]"
+    ],
+    "level-field": "level",
+    "level": {
+      "fatal": "60",
+      "error": "50",
+      "warning": "40",
+      "info": "30",
+      "debug": "20",
+      "trace": "10"
+    },
+    "value": {
+      "pid": { "kind": "integer", "identifier": true },
+      "name": { "kind": "string", "identifier": true },
+      "hostname": { "kind": "string", "identifier": true },
+      "time": { "kind": "string", "identifier": false },
+      "level": { "kind": "integer", "identifier": true }
+    },
+    "timestamp-field": "time",
+    "body-field": "msg",
+    "multiline": false
+  },
+  "express-bunyan-logger": {
+    "title": "Bunyan Log",
+    "url": "https://github.com/villadora/express-bunyan-logger",
+    "description": "Log for bunyan output",
+    "json": true,
+    "line-format": [
+      { "field": "name" },
+      "(",
+      { "field": "pid" },
+      ")",
+      " @ ",
+      { "field": "hostname" },
+      " -- ",
+      { "field": "time" },
+      " [",
+      { "field": "level" },
+      "]"
+    ],
+    "level-field": "level",
+    "level": {
+      "fatal": "60",
+      "error": "50",
+      "warning": "40",
+      "info": "30",
+      "debug": "20",
+      "trace": "10"
+    },
+    "value": {
+      "pid": { "kind": "integer", "identifier": true },
+      "name": { "kind": "string", "identifier": true },
+      "hostname": { "kind": "string", "identifier": true },
+      "time": { "kind": "string" },
+      "level": { "kind": "integer", "identifier": true },
+      "req_id": { "kind": "string", "identifier": true },
+      "remote-address": { "kind": "string", "collate": "ipaddress" },
+      "ip": { "kind": "string", "collate": "ipaddress" },
+      "url": { "kind": "string" },
+      "referer": { "kind": "string" },
+      "level": { "kind": "integer", "identifier": true },
+      "response-time": { "kind": "float" }
+    },
+    "timestamp-field": "time",
+    "body-field": "msg",
+    "multiline": false
+  }
+}
