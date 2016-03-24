@@ -1,7 +1,7 @@
 {
-  "bunyan": {
+  "express-bunyan-logger": {
     "title": "Bunyan Log",
-    "url": "https://github.com/trentm/node-bunyan",
+    "url": "https://github.com/villadora/express-bunyan-logger",
     "description": "Log for bunyan output",
     "json": true,
     "line-format": [
@@ -30,8 +30,15 @@
       "pid": { "kind": "integer", "identifier": true },
       "name": { "kind": "string", "identifier": true },
       "hostname": { "kind": "string", "identifier": true },
-      "time": { "kind": "string", "identifier": false },
-      "level": { "kind": "integer", "identifier": true }
+      "time": { "kind": "string" },
+      "level": { "kind": "integer", "identifier": true },
+      "req_id": { "kind": "string", "identifier": true },
+      "remote-address": { "kind": "string", "collate": "ipaddress" },
+      "ip": { "kind": "string", "collate": "ipaddress" },
+      "url": { "kind": "string" },
+      "referer": { "kind": "string" },
+      "level": { "kind": "integer", "identifier": true },
+      "response-time": { "kind": "float" }
     },
     "timestamp-field": "time",
     "body-field": "msg",
